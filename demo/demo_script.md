@@ -10,7 +10,7 @@ This document provides a step-by-step script for creating your demo video.
 
 **[Show title slide or application homepage]**
 
-"Hello! Today I'm demonstrating the Healthcare Symptom Checker, an AI-powered educational tool that helps users understand possible conditions based on their symptoms. This is a full-stack application built with FastAPI backend and vanilla JavaScript frontend, integrated with Claude AI by Anthropic."
+"Hello! Today I'm demonstrating the Healthcare Symptom Checker, an AI-powered educational tool that helps users understand possible conditions based on their symptoms. This is a full-stack application built with FastAPI backend and vanilla JavaScript frontend, integrated with Google Gemini AI."
 
 ---
 
@@ -33,7 +33,7 @@ The application follows a clean architecture with clear separation of concerns."
 
 ### Starting the Backend
 
-"First, let's start the backend server. I've already set my Anthropic API key as an environment variable."
+"First, let's start the backend server. I've already set my Google Gemini API key as an environment variable."
 
 ```bash
 # Show the command
@@ -75,7 +75,7 @@ python backend/app.py
 
 **[Click "Analyze Symptoms"]**
 
-"The application is now sending the request to our backend, which uses Claude AI to analyze the symptoms."
+"The application is now sending the request to our backend, which uses Google Gemini AI to analyze the symptoms."
 
 **[Wait for results]**
 
@@ -120,7 +120,7 @@ python backend/app.py
 **[Open backend/llm_client.py]**
 
 "Here's the LLM integration:
-- We use Claude Sonnet 4 for analysis
+- We use Google Gemini 1.5 Flash for analysis
 - The prompt is carefully crafted to prioritize safety and education
 - Temperature is set to 0.3 for consistent responses
 - We request structured JSON output for easy parsing
@@ -165,7 +165,7 @@ python backend/app.py
 
 "Let me highlight the key features that meet the assignment requirements:
 
-✅ **LLM Integration**: Claude AI analyzes symptoms with intelligent reasoning
+✅ **LLM Integration**: Google Gemini AI analyzes symptoms with intelligent reasoning
 
 ✅ **Symptom Input**: Text-based symptom description with optional demographic info
 
@@ -260,10 +260,10 @@ All code is available in the GitHub repository with comprehensive documentation.
 ### LLM returns errors
 - Verify API key validity
 - Check internet connection
-- Ensure Anthropic API is accessible
+- Ensure Google AI API is accessible
+- Check API quota/limits
 
 ### Database errors
 - Check write permissions in backend folder
 - Delete symptom_checker.db and restart to reset
 
-Good luck with your demo!
